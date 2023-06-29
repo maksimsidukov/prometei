@@ -1,0 +1,237 @@
+:root {
+    --control-blue-accent: #081F5C;
+    --white: #FFFFFF;
+    --ui-gold: #D6C774;
+    --text-hover: #2E3C4E;
+    --text-primary: #121922;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: gray;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border-radius: 8px;
+    background: var(--white);
+    border: none;
+    padding: 18px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--control-blue-accent);
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    width: inherit;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_button {
+    padding: 0 24px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.menu_items {
+    display: flex;
+    gap: 32px;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.block {
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+.centered {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--control-blue-accent);
+    color: var(--white);
+    height: 580px;
+    background-image: url("./images/header_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .block .title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 79px;
+    text-align: center;
+    margin-top: 154px;
+}
+
+header .block .button {
+    margin-top: 36px;
+    width: 200px;
+}
+
+.white_block {
+    padding: 40px 40px 60px;
+    border-radius: 16px;
+    background-color: var(--white);
+}
+
+.about_us {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+}
+
+.about_us_services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    margin-bottom: 32px;
+}
+
+.about_us_services_separator {
+    width: 1px;
+    height: 55px;
+    align-self: stretch;
+    background-color: var(--ui-gold);
+}
+
+.about_us_service {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.about_us_service_img {
+    width: 55px;
+    height: 55px;
+}
+
+.about_us_service_name {
+    color: var(--control-blue-accent);
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.about_us_content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about_us_content_img {
+    width: 467px;
+    height: 526px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.about_us_content_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-right: 100px;
+}
+
+.about_us_content_title {
+    color: var(--control-blue-accent);
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.about_us_content_text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-hover);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.advisory_business_header {
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    margin-bottom: 40px;
+}
+
+.advisory_business_content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+}
+
+.advisory_business_content_row {
+    display: flex;
+    height: 300px;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+}
+
+.advisory_business_content_element {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    padding: 40px 32px;
+    justify-content: space-between;
+    align-self: stretch;
+    border-radius: 12px;
+    background-color: #04275980;
+}
+
+.advisory_business_content_element_header {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.advisory_business_content_element_icon {
+    position: absolute;
+    bottom: 40px;
+    left: 32px;
+    width: 32px;
+    height: 12px;
+}
+
+.advisory_business_content_element_icon_bg {
+    position: absolute;
+    bottom: 40px;
+    right: 32px;
+    width: 101px;
+    height: 90px;
+    background: url("./images/advisory_business/icon_bg.png");
+}
+
