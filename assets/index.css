@@ -1,16 +1,35 @@
 :root {
     --control-blue-accent: #081F5C;
     --white: #FFFFFF;
+    --white-hover: #F0F0F080;
     --ui-gold: #D6C774;
     --text-hover: #2E3C4E;
     --text-primary: #121922;
+    --text-secondary: #B4BDC7;
+    --bg-grey-white: #FAFAFA;
+}
+
+@keyframes pulse-play {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: gray;
+    background-color: var(--bg-grey-white);: ;
+    background-image: url("./images/main_bg.png");
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -32,10 +51,12 @@ button {
 
 .menu {
     display: flex;
-    width: inherit;
+    width: 100%;
     position: fixed;
     justify-content: space-between;
     align-items: center;
+    max-width: 1216px;
+    z-index: 10;
 }
 
 .menu_button {
@@ -56,7 +77,7 @@ button {
 
 .block {
     max-width: 1216px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .centered {
@@ -96,7 +117,7 @@ header .block .button {
 }
 
 .about_us {
-    position: absolute;
+    position: inherit;
     top: -30px;
     left: 0;
     right: 0;
@@ -154,7 +175,6 @@ header .block .button {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    margin-right: 100px;
 }
 
 .about_us_content_title {
@@ -173,6 +193,7 @@ header .block .button {
     color: var(--text-hover);
     font-size: 14px;
     line-height: 18px;
+    max-width: 516px;
 }
 
 .advisory_business_header {
@@ -208,7 +229,7 @@ header .block .button {
     justify-content: space-between;
     align-self: stretch;
     border-radius: 12px;
-    background-color: #04275980;
+    background-size: cover;
 }
 
 .advisory_business_content_element_header {
@@ -235,3 +256,204 @@ header .block .button {
     background: url("./images/advisory_business/icon_bg.png");
 }
 
+.prometheus_text {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 1078px;
+    margin: 70px auto;
+}
+
+.our_principles {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    padding: 40px 80px;
+    margin-bottom: 70px;
+}
+
+.our_principles_header {
+    color: var(--control-blue-accent);
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.our_principles_content {
+    position: relative;
+    height: 544px;
+    display: flex;
+}
+
+.our_principles_content_image_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.our_principles_content_image {
+    position: absolute;
+    width: 368px;
+    height: 574px;
+    animation: pulse-play 2s infinite;
+}
+
+.our_principles_content_left {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding-top: 85px;
+    width: 50%;
+    z-index: 2;
+}
+
+.our_principles_content_right {
+    text-align: right;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    padding-top: 53px;
+    width: 50%;
+    z-index: 2;
+}
+
+.our_principles_content_item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.our_principles_content_item_right {
+    align-items: flex-end;
+    width: 100%;
+}
+
+.our_principles_content_item_title {
+    color: var(--control-blue-accent);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.our_principles_content_item_text {
+    color: var(--text-hover);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.our_principles_content_item_line {
+    height: 2px;
+    border-radius: 4px;
+    background: var(--text-secondary);
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    background-image: url("./images/team/team_bg.png");
+    margin-bottom: 70px;
+}
+
+.team_title {
+    color: var(--white);
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.team_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.team_list_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.team_list_item_avatar {
+    width: 200px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.team_list_item_name {
+    color: var(--white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+
+.team_list_item_icon {
+    width: 32px;
+    height: 8px;
+    color: var(--ui-gold);
+}
+
+.our_projects {
+    background-image: url("./images/out_projects/bg.jpg");
+    display: flex;
+    padding: 40px 40px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.our_projects_title {
+    color: var(--control-blue-accent, #081F5C);
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.our_projects_list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.our_projects_list_item {
+    display: flex;
+    height: 70px;
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: var(--white);
+
+    transition: background-color 300ms linear;
+}
+
+.our_projects_list_item:hover {
+    background-color: var(--white-hover);
+}
