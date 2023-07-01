@@ -13,17 +13,19 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="block">
+    <div class="menu_block">
         <div class="menu">
             <img src="/assets/images/logo.png" alt="logo">
             <div class="menu_items">
-                <a>About us</a>
-                <a>Advisory business</a>
-                <a>Our Principles</a>
-                <a>Team</a>
-                <a>Contacts</a>
+                <a class="menu_item" href="#about_us">About us</a>
+                <a class="menu_item">Advisory business</a>
+                <a class="menu_item">Our Principles</a>
+                <a class="menu_item">Team</a>
+                <a class="menu_item">Contacts</a>
             </div>
-            <button class="menu_button">Connect</button>
+            <a href="#connect">
+                <button class="button_white button_small">Connect</button>
+            </a>
         </div>
     </div>
 
@@ -33,12 +35,20 @@
                 <div class="title">
                     A Fast Growing<br>Financial Advisory Firm
                 </div>
-                <button class="button">Connect</button>
+
+                <a href="#connect">
+                    <button
+                            class="button_white button_large"
+                            style="width: 200px;"
+                    >
+                        Connect
+                    </button>
+                </a>
             </div>
         </div>
     </header>
 
-    <div class="block" style="position: relative">
+    <div class="block" id="about_us" style="position: relative">
         <div class="white_block about_us">
             <div class="about_us_services">
                 <div class="about_us_service">
@@ -77,7 +87,7 @@
         </div>
     </div>
 
-    <div class="block advisory_business">
+    <div id="advisory" class="block advisory_business">
         <div class="advisory_business_header">
             Advisory Business
         </div>
@@ -98,7 +108,6 @@
                     <div class="advisory_business_content_element_icon_bg">
 
                     </div>
-                    <img src="./assets/images/advisory_business/merger_bg.jpg" alt="">
                 </div>
                 <div
                     class="advisory_business_content_element"
@@ -176,14 +185,14 @@
         </div>
     </div>
 
-    <div class="block">
+    <div id="principles" class="block">
         <div class="white_block our_principles">
             <div class="our_principles_header">
                 Our Principles
             </div>
             <div class="our_principles_content">
                 <div class="our_principles_content_image_wrapper">
-                    <img class="our_principles_content_image" src="./assets/images/our_principles/tourch.svg" alt="">
+                    <img class="our_principles_content_image" src="./assets/images/our_principles/torch.png" alt="">
                 </div>
                 <div class="our_principles_content_left">
                     <div class="our_principles_content_item">
@@ -262,7 +271,7 @@
         </div>
     </div>
 
-    <div class="block">
+    <div id="team" class="block">
         <div class="white_block team">
             <div class="team_title">
                 Prometei Team
@@ -340,6 +349,106 @@
             </div>
         </div>
     </div>
+
+    <div id="connect" class="block">
+        <div class="form_block">
+            <div class="form_wrapper">
+                <div class="form_title">
+                    Contact us
+                </div>
+                <form action="">
+                    <div class="input_wrapper">
+                        <input id="name_input" class="input" type="text">
+                        <label class="input_label" for="name_input">
+                            Name
+                        </label>
+                    </div>
+                    <div class="input_wrapper">
+                        <input id="email_input" class="input" type="text">
+                        <label class="input_label" for="email_input">
+                            Email
+                        </label>
+                    </div>
+                    <button style="width: 100%;" class="button_primary button_medium" type="submit">
+                        Connect
+                    </button>
+                    <div class="form_hint">
+                        By clicking the «Connect» button, I consent <br>
+                        to the <span class="form_hint_clicked">processing of data</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="block footer_block">
+            <div class="footer_contact">
+                <img class="footer_logo" src="/assets/images/logo_black.png" alt="">
+                <a href="#connect">
+                    <button class="button_medium button_primary">Connect</button>
+                </a>
+            </div>
+            <div class="footer_map">
+                <div class="footer_map_city_wrapper" style="top: 16%; left: 10.7%">
+                    <div class="footer_map_city_name font_caption font_bold">
+                        London
+                    </div>
+                    <div class="footer_map_city_dot_wrapper">
+                        <div class="footer_map_city_dot">
+                        </div>
+                        <div class="footer_map_city_dot_animate">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_map_city_wrapper" style="top: 15%; left: 30.7%">
+                    <div class="footer_map_city_name font_caption font_bold">
+                        Moscow
+                    </div>
+                    <div class="footer_map_city_dot_wrapper">
+                        <div class="footer_map_city_dot">
+                        </div>
+                        <div class="footer_map_city_dot_animate">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_map_city_wrapper" style="top: 20.6%; left: 16.8%">
+                    <div class="footer_map_city_name font_caption font_bold">
+                        Zug
+                    </div>
+                    <div class="footer_map_city_dot_wrapper">
+                        <div class="footer_map_city_dot">
+                        </div>
+                        <div class="footer_map_city_dot_animate">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_map_city_wrapper" style="top: 24.5%; left: 47%">
+                    <div class="footer_map_city_name font_caption font_bold">
+                       Bishkek
+                    </div>
+                    <div class="footer_map_city_dot_wrapper">
+                        <div class="footer_map_city_dot">
+                        </div>
+                        <div class="footer_map_city_dot_animate">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_map_city_wrapper" style="top: 40%; left: 38.4%">
+                    <div class="footer_map_city_name font_caption font_bold">
+                       Dubai
+                    </div>
+                    <div class="footer_map_city_dot_wrapper">
+                        <div class="footer_map_city_dot">
+                        </div>
+                        <div class="footer_map_city_dot_animate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
+<script src="/assets/index.js"></script>
 </body>
 </html>
