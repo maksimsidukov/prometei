@@ -185,6 +185,10 @@ button {
     font-weight: 600;
 }
 
+.mobile_only {
+    display: none;
+}
+
 .menu {
     display: flex;
     width: 100%;
@@ -242,16 +246,13 @@ button {
 header {
     background-color: var(--blue);
     color: var(--white);
-    height: 580px;
+    min-height: 580px;
     background-image: url("./images/header_bg.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 header .block .title {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 79px;
     text-align: center;
     margin-top: 154px;
     margin-bottom: 36px;
@@ -536,6 +537,8 @@ header .block .button {
 
 .team_list {
     display: flex;
+    gap: 32px;
+    overflow: auto;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
@@ -573,6 +576,9 @@ header .block .button {
 
 .our_projects {
     background-image: url("./images/out_projects/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
     display: flex;
     padding: 40px 40px 60px;
     flex-direction: column;
@@ -788,4 +794,230 @@ footer {
     border-radius: 50%;
 
     animation: pulsing 1s infinite running;
+}
+
+@media (max-width: 865px) {
+    body {
+        background-image: none;
+    }
+
+    button {
+        width: 100% !important;
+    }
+
+    .pc_only {
+        display: none;
+    }
+
+    .mobile_only {
+        display: inherit;
+    }
+
+    header {
+        padding: 0 16px;
+    }
+
+    header .centered a {
+        width: 100%;
+    }
+
+    .about_us {
+        padding: 32px 16px;
+    }
+
+    .about_us_services {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .about_us_services_separator {
+        display: none;
+    }
+
+    .about_us_service_name {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    .about_us_content {
+        flex-direction: column;
+    }
+
+    .about_us_content_title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .about_us_content_img {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .advisory_business {
+        padding: 0 16px;
+    }
+
+    .advisory_business_header {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px
+    }
+
+    .advisory_business_content_row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .advisory_business_content_element {
+        width: auto !important;
+    }
+
+    .advisory_business_content_element_header {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    .advisory_business_content_element_icon {
+        display: none;
+    }
+
+    .advisory_business_content_element_icon_bg {
+        display: none;
+    }
+
+    .prometheus_text {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+
+    .our_principles {
+        padding: 32px 16px;
+    }
+
+
+    .our_principles_content {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .our_principles_header {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .our_principles_content_image_wrapper {
+        position: initial;
+    }
+
+    .our_principles_content_image {
+        position: initial;
+        animation: none;
+    }
+
+    .our_principles_content_left {
+        width: 100%;
+    }
+
+    .our_principles_content_left .our_principles_content_item:nth-child(2n) {
+        text-align: right;
+    }
+
+    .our_principles_content_left .our_principles_content_item:nth-child(2n -1) {
+        text-align: left;
+        align-items: initial;
+    }
+
+    .our_principles_content_item_title {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .our_principles_content_item_line {
+        width: 100% !important;
+        background-color: var(--gold);
+    }
+
+    .our_principles_content_item_text {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .team {
+        padding: 32px 24px
+    }
+
+    .team_list_item_avatar {
+        width: 150px;
+        height: 200px;
+    }
+
+    .team_list_item_name {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .our_projects {
+        padding: 32px 16px;
+    }
+
+    .our_projects_title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .our_projects_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .our_projects_list_item {
+        height: 50px;
+        padding: 0;
+    }
+
+    .our_projects_list_item img {
+        transform: scale(0.6);
+    }
+
+    .form_block {
+        height: auto;
+    }
+
+    .footer_block {
+        flex-direction: column-reverse;
+        margin-top: -88px;
+        background-color: var(--bg-grey-white);
+        overflow: hidden;
+    }
+
+    .footer_map {
+        transform: scale(0.8);
+        top: 0;
+        left: 0;
+        margin-left: -155px;
+    }
 }

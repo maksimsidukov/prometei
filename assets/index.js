@@ -13,7 +13,7 @@
     document.addEventListener('scroll', (ev) => {
         const scrollTop = ev.target.scrollingElement.scrollTop
         const menu = document.querySelector('.menu_block')
-        if (scrollTop > 100) {
+        if (scrollTop > 75) {
             menu.style.backgroundColor = 'var(--blue)'
         } else {
             menu.style.backgroundColor = 'transparent'
