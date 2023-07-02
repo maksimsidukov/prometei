@@ -186,7 +186,7 @@ button {
 }
 
 .mobile_only {
-    display: none !important;
+    display: none;
 }
 
 .menu {
@@ -794,6 +794,12 @@ footer {
     border-radius: 50%;
 
     animation: pulsing 1s infinite running;
+}
+
+@media (min-width: 865px) {
+    .mobile_only {
+        display: none !important;
+    }
 }
 
 @media (max-width: 865px) {
