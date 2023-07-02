@@ -796,7 +796,7 @@ footer {
     animation: pulsing 1s infinite running;
 }
 
-@media (min-width: 865px) {
+@media (min-width: 866px) {
     .mobile_only {
         display: none !important;
     }
@@ -1011,6 +1011,10 @@ footer {
 
     .form_block {
         height: auto;
+    }
+
+    .form_wrapper {
+        width: 100%;
     }
 
     .footer_block {
