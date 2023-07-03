@@ -190,12 +190,17 @@ button {
 }
 
 .menu {
+    height: 64px;
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     max-width: 1216px;
     z-index: 10;
+}
+
+.menu_logo {
+    width: 120px;
 }
 
 .menu_block {
@@ -222,6 +227,10 @@ button {
     text-decoration: none;
 }
 
+.menu_item_active {
+    color: var(--gold);
+}
+
 .menu_item:hover {
     color: var(--white-hover);
 }
@@ -244,11 +253,12 @@ button {
 }
 
 header {
-    background-color: var(--blue);
+    background-color: #1E3569;
     color: var(--white);
     min-height: 580px;
     background-image: url("./images/header_bg.png");
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
 }
 
@@ -613,12 +623,13 @@ header .block .button {
     align-items: center;
     border-radius: 16px;
     background-color: var(--white);
-
-    transition: background-color 300ms linear;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .our_projects_list_item:hover {
     background-color: var(--white-hover);
+    transform: scale(1.05);
 }
 
 .form_block {
@@ -629,6 +640,7 @@ header .block .button {
     width: 100%;
     height: 588px;
     border-radius: 24px;
+    margin-bottom: 70px;
 }
 
 .form_wrapper {
@@ -827,6 +839,34 @@ footer {
         width: 100%;
     }
 
+    .menu {
+        padding: 0 16px;
+    }
+
+    .mobile_menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--blue);
+        z-index: 2;
+        transform: translateX(100%);
+        padding: 92px 16px 16px;
+        transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile_menu.open {
+        transform: translateX(0);
+    }
+
+    .menu_items_mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
     .about_us {
         padding: 32px 16px;
     }
@@ -938,6 +978,11 @@ footer {
 
     .our_principles_content_left {
         width: 100%;
+        padding-top: 30px;
+        gap: 32px;
+    }
+    .our_principles_content_left .our_principles_content_item {
+        gap: 8px;
     }
 
     .our_principles_content_left .our_principles_content_item:nth-child(2n) {

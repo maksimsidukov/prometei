@@ -1,4 +1,14 @@
 (() =>  {
+    const nav = $('.menu_block')
+    const navHeight = nav.outerHeight()
+    const sections = $('section')
+    const mobileMenuIcon = $('.mobile_menu_icon')
+
+    const closeMenuIconPath = 'assets/images/close_menu.svg'
+    const openMenuIconPath = 'assets/images/open_menu.svg'
+    let isMobileMenuOpen = false
+
+
     const inputs = document.querySelectorAll("input")
     inputs.forEach(input => {
         input.addEventListener('input', (ev) => {
@@ -10,6 +20,37 @@
         })
     })
 
+    function toggleMobileMenu(val = isMobileMenuOpen) {
+        const menu = $('.mobile_menu')
+        console.log(23)
+        if (val) {
+            menu.removeClass('open')
+            mobileMenuIcon.attr('src', openMenuIconPath)
+        } else {
+            menu.addClass('open')
+            mobileMenuIcon.attr('src', closeMenuIconPath)
+        }
+        isMobileMenuOpen = !val
+    }
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function() {
+            var top = $(this).offset().top - navHeight,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                console.log(123)
+                nav.find('a').removeClass('menu_item_active');
+                sections.removeClass('menu_item_active');
+
+                $(this).addClass('active_nav');
+                nav.find('a[scrollTo="#'+$(this).attr('id')+'"]').addClass('menu_item_active');
+            }
+        });
+    });
+
     document.addEventListener('scroll', (ev) => {
         const scrollTop = ev.target.scrollingElement.scrollTop
         const menu = document.querySelector('.menu_block')
@@ -19,4 +60,19 @@
             menu.style.backgroundColor = 'transparent'
         }
     })
+
+    $(document).find('a').on('click', function () {
+        var $el = $(this)
+            , id = $el.attr('scrollTo');
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - navHeight
+        }, 500);
+
+        toggleMobileMenu(true)
+
+        return false;
+    });
+
+    mobileMenuIcon.on('click', () => toggleMobileMenu())
 })()

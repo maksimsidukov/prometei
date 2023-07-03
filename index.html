@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prometei capital</title>
-    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="stylesheet" href="assets/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,17 +15,32 @@
 <div class="wrapper">
     <div class="menu_block">
         <div class="menu">
-            <img src="/assets/images/logo.png" alt="logo">
-            <div class="menu_items">
-                <a class="menu_item" href="#about_us">About us</a>
-                <a class="menu_item">Advisory business</a>
-                <a class="menu_item">Our Principles</a>
-                <a class="menu_item">Team</a>
-                <a class="menu_item">Contacts</a>
+            <img class="menu_logo" src="assets/images/logo.png" alt="logo">
+            <div class="menu_items pc_only">
+                <a class="menu_item" scrollTo="#about_us">About us</a>
+                <a class="menu_item" scrollTo="#advisory">Advisory business</a>
+                <a class="menu_item" scrollTo="#principles">Our Principles</a>
+                <a class="menu_item" scrollTo="#team">Team</a>
+                <a class="menu_item" scrollTo="#connect">Contacts</a>
             </div>
-            <a href="#connect">
+            <a class="pc_only" scrollTo="#connect">
                 <button class="button_white button_small">Connect</button>
             </a>
+            <div class="mobile_only">
+                <img class="mobile_menu_icon" src="assets/images/open_menu.svg" alt="">
+            </div>
+        </div>
+        <div class="mobile_menu mobile_only">
+            <div class="menu_items_mobile">
+                <a class="menu_item font_head_m" scrollTo="#about_us">About us</a>
+                <a class="menu_item font_head_m" scrollTo="#advisory">Advisory business</a>
+                <a class="menu_item font_head_m" scrollTo="#principles">Our Principles</a>
+                <a class="menu_item font_head_m" scrollTo="#team">Team</a>
+                <a class="menu_item font_head_m" scrollTo="#connect">Contacts</a>
+                <a scrollTo="#connect">
+                    <button class="button_white button_medium">Connect</button>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -39,7 +54,7 @@
                     A fast growing<br>financial<br>advisory&nbsp;firm
                 </div>
 
-                <a href="#connect">
+                <a scrollTo="#connect">
                     <button
                             class="button_white button_large"
                             style="width: 200px;"
@@ -51,28 +66,28 @@
         </div>
     </header>
 
-    <div class="block" id="about_us" style="position: relative">
+    <section class="block" id="about_us" style="position: relative">
         <div class="white_block about_us">
             <div class="about_us_services">
                 <div class="about_us_service">
-                    <img class="about_us_service_img" src="./assets/images/services/merge.png" alt="">
+                    <img class="about_us_service_img" src="assets/images/services/merge.png" alt="">
                     <div class="about_us_service_name">Mergers & Acquisitions</div>
                 </div>
                 <div class="about_us_services_separator"></div>
                 <div class="about_us_service">
-                    <img class="about_us_service_img" src="./assets/images/services/capital_market.png" alt="">
+                    <img class="about_us_service_img" src="assets/images/services/capital_market.png" alt="">
                     <div class="about_us_service_name">Capital market transactions (Debt&nbsp;&&nbsp;Equity)</div>
                 </div>
                 <div class="about_us_services_separator"></div>
                 <div class="about_us_service">
-                    <img class="about_us_service_img" src="./assets/images/services/strategy.png" alt="">
+                    <img class="about_us_service_img" src="assets/images/services/strategy.png" alt="">
                     <div class="about_us_service_name">Strategy consulting and operations</div>
                 </div>
             </div>
             <div class="about_us_content">
                 <img
                         class="about_us_content_img"
-                        src="./assets/images/about_us_img.png"
+                        src="assets/images/about_us_img.png"
                         alt=""
                 >
                 <div class="about_us_content_text_wrapper">
@@ -88,9 +103,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="advisory" class="block advisory_business">
+    <section id="advisory" class="block advisory_business">
         <div class="advisory_business_header">
             Advisory Business
         </div>
@@ -98,14 +113,14 @@
             <div class="advisory_business_content_row">
                 <div
                     class="advisory_business_content_element"
-                    style="width: 439px;background-image: url('./assets/images/advisory_business/merger_bg.png')"
+                    style="width: 439px;background-image: url('assets/images/advisory_business/merger_bg.png')"
                 >
                     <div class="advisory_business_content_element_header">
                         Merger & Acquisitions <br>and Strategy
                     </div>
                     <img
                         class="advisory_business_content_element_icon"
-                        src="./assets/images/advisory_business/icon.svg"
+                        src="assets/images/advisory_business/icon.svg"
                         alt=""
                     >
                     <div class="advisory_business_content_element_icon_bg">
@@ -114,14 +129,14 @@
                 </div>
                 <div
                     class="advisory_business_content_element"
-                    style="background-image: url('./assets/images/advisory_business/capital_bg.png')"
+                    style="background-image: url('assets/images/advisory_business/capital_bg.png')"
                 >
                     <div class="advisory_business_content_element_header">
                         Capital Structure
                     </div>
                     <img
                         class="advisory_business_content_element_icon"
-                        src="./assets/images/advisory_business/icon.svg"
+                        src="assets/images/advisory_business/icon.svg"
                         alt=""
                     >
                     <div class="advisory_business_content_element_icon_bg">
@@ -130,14 +145,14 @@
                 </div>
                 <div
                         class="advisory_business_content_element"
-                        style="background-image: url('./assets/images/advisory_business/debt_bg.png')"
+                        style="background-image: url('assets/images/advisory_business/debt_bg.png')"
                 >
                     <div class="advisory_business_content_element_header">
                         Debt transactions
                     </div>
                     <img
                             class="advisory_business_content_element_icon"
-                            src="./assets/images/advisory_business/icon.svg"
+                            src="assets/images/advisory_business/icon.svg"
                             alt=""
                     >
                     <div class="advisory_business_content_element_icon_bg">
@@ -148,14 +163,14 @@
             <div class="advisory_business_content_row">
                 <div
                         class="advisory_business_content_element"
-                        style="background-image: url('./assets/images/advisory_business/capital_markers_bg.png')"
+                        style="background-image: url('assets/images/advisory_business/capital_markers_bg.png')"
                 >
                     <div class="advisory_business_content_element_header">
                         Capital Markets <br>and Private Funds
                     </div>
                     <img
                             class="advisory_business_content_element_icon"
-                            src="./assets/images/advisory_business/icon.svg"
+                            src="assets/images/advisory_business/icon.svg"
                             alt=""
                     >
                     <div class="advisory_business_content_element_icon_bg">
@@ -164,14 +179,14 @@
                 </div>
                 <div
                         class="advisory_business_content_element"
-                        style="background-image: url('./assets/images/advisory_business/strategy_gb.png')"
+                        style="background-image: url('assets/images/advisory_business/strategy_gb.png')"
                 >
                     <div class="advisory_business_content_element_header">
                         Strategy consulting <br>and operations
                     </div>
                     <img
                             class="advisory_business_content_element_icon"
-                            src="./assets/images/advisory_business/icon.svg"
+                            src="assets/images/advisory_business/icon.svg"
                             alt=""
                     >
                     <div class="advisory_business_content_element_icon_bg">
@@ -180,7 +195,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="block">
         <div class="prometheus_text">
@@ -188,14 +203,14 @@
         </div>
     </div>
 
-    <div id="principles" class="block">
+    <section id="principles" class="block">
         <div class="white_block our_principles">
             <div class="our_principles_header">
                 Our Principles
             </div>
             <div class="our_principles_content">
                 <div class="our_principles_content_image_wrapper">
-                    <img class="our_principles_content_image" src="./assets/images/our_principles/torch.png" alt="">
+                    <img class="our_principles_content_image" src="assets/images/our_principles/torch.png" alt="">
                 </div>
                 <div class="our_principles_content_left pc_only">
                     <div class="our_principles_content_item">
@@ -343,9 +358,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="team" class="block">
+    <section id="team" class="block">
         <div class="white_block team">
             <div class="team_title pc_only">
                 Prometei Team
@@ -388,7 +403,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="block">
         <div class="white_block our_projects">
@@ -397,34 +412,34 @@
             </div>
             <div class="our_projects_list">
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%204.png" alt="">
+                    <img src="assets/images/out_projects/image%204.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%205.png" alt="">
+                    <img src="assets/images/out_projects/image%205.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%206.png" alt="">
+                    <img src="assets/images/out_projects/image%206.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%207.png" alt="">
+                    <img src="assets/images/out_projects/image%207.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%208.png" alt="">
+                    <img src="assets/images/out_projects/image%208.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%209.png" alt="">
+                    <img src="assets/images/out_projects/image%209.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%2010.png" alt="">
+                    <img src="assets/images/out_projects/image%2010.png" alt="">
                 </div>
                 <div class="our_projects_list_item">
-                    <img src="./assets/images/out_projects/image%2011.png" alt="">
+                    <img src="assets/images/out_projects/image%2011.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="connect" class="block">
+    <section id="connect" class="block">
         <div class="form_block">
             <div class="form_wrapper">
                 <div class="form_title">
@@ -453,13 +468,13 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="block footer_block">
             <div class="footer_contact">
-                <img class="footer_logo" src="/assets/images/logo_black.png" alt="">
-                <a href="#connect">
+                <img class="footer_logo" src="assets/images/logo_black.png" alt="">
+                <a scrollTo="#connect">
                     <button class="button_medium button_primary">Connect</button>
                 </a>
             </div>
@@ -523,6 +538,7 @@
         </div>
     </footer>
 </div>
-<script src="/assets/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="assets/index.js"></script>
 </body>
 </html>
