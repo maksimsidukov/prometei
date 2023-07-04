@@ -41,7 +41,6 @@
                 bottom = top + $(this).outerHeight();
 
             if (cur_pos >= top && cur_pos <= bottom) {
-                console.log(123)
                 nav.find('a').removeClass('menu_item_active');
                 sections.removeClass('menu_item_active');
 
@@ -73,6 +72,11 @@
 
         return false;
     });
+
+    $('.mobile_expand_about_us').on('click', function () {
+        $(this).css('height', '0')
+        $('.mobile_expanded_about_us_hide').css('height', 'auto')
+    })
 
     mobileMenuIcon.on('click', () => toggleMobileMenu())
 })()
