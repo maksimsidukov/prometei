@@ -4,7 +4,7 @@
     const sections = $('section')
     const mobileMenuIcon = $('.mobile_menu_icon')
 
-    const closeMenuIconPath = 'assets/images/close_menu.svg'
+    const closeMenuIconPath = 'assets/images/close.svg'
     const openMenuIconPath = 'assets/images/open_menu.svg'
     let isMobileMenuOpen = false
 
@@ -77,6 +77,20 @@
         $(this).css('height', '0')
         $('.mobile_expanded_about_us_hide').css('height', 'auto')
     })
+
+    $('.modal_close_icon').on('click', function () {
+        $('.modal_wrapper').css('display', 'none')
+    })
+
+    $('.team_list_item').on('click', function () {
+        $('.modal_wrapper').css('display', 'flex')
+    })
+
+    window.onclick = function(event) {
+        if (event.target == document.querySelector('.modal_wrapper')) {
+            $('.modal_wrapper').css('display', 'none')
+        }
+    }
 
     mobileMenuIcon.on('click', () => toggleMobileMenu())
 })()
