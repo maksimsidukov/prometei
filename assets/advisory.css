@@ -265,11 +265,12 @@ header {
 header .block .title {
     text-align: center;
     margin-top: 154px;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
 }
 
 header .block .title_text {
     text-align: center;
+    margin-bottom: 34px;
 }
 
 .white_block {
@@ -308,6 +309,7 @@ header .block .title_text {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-column-gap: 30px;
+    overflow: auto;
 }
 
 .merger_item {
@@ -336,6 +338,8 @@ header .block .title_text {
 
 .debt_transitions {
     background: no-repeat url("./images/advisory_page/debt_transitions_bg.png") center center;
+    background-size: cover;
+    margin-bottom: 40px;
 }
 
 .debt_transitions_header {
@@ -411,7 +415,7 @@ header .block .title_text {
 }
 
 .capital_markets_img {
-    background: no-repeat url("./images/advisory_page/capital_markets.png") center center;
+    background: no-repeat url("./images/advisory_page/capital_markets.jpg") center center;
     background-size: cover;
     border-radius: 12px;
     min-width: 400px;
@@ -463,6 +467,7 @@ header .block .title_text {
 }
 
 .capital_structure_content {
+    width: 100%;
     display: flex;
     gap: 82px;
 }
@@ -556,6 +561,7 @@ header .block .title_text {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-column-gap: 30px;
+    overflow: auto;
 }
 
 .strategy_item {
@@ -684,6 +690,22 @@ footer {
         width: 100%;
     }
 
+    header .block .title {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 38px;
+        margin-bottom: 20px;
+    }
+
+    header .block .title_text {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 32px;
+    }
+
     .menu {
         padding: 0 16px;
     }
@@ -711,6 +733,139 @@ footer {
         gap: 24px;
         width: 100%;
     }
+
+    .merger_title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .merger_info {
+        flex-direction: column;
+    }
+
+    .merger_info_img {
+        width: 100%;
+    }
+
+    .merger_info_text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .merger_items {
+        overflow: auto;
+    }
+
+    .merger_item_name {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .debt_transitions_content {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .debt_transitions_header {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .debt_transitions_chart {
+        width: 100%;
+    }
+
+    .debt_transitions_content_items {
+        display: flex;
+        gap: 20px;
+        overflow: auto;
+    }
+
+    .debt_transitions_content_item {
+        min-width: 270px;
+    }
+
+    .capital_markets_content {
+        flex-direction: column;
+    }
+
+    .capital_markets_img {
+        height: 200px;
+        min-width: 0;
+    }
+
+    .capital_markets_content_info_items {
+        display: flex;
+        gap: 20px;
+        overflow: auto;
+    }
+
+    .capital_markets_content_info_item {
+        min-width: 270px;
+    }
+
+    .capital_structure_content {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .capital_structure_img {
+        min-width: 0;
+        height: 200px;
+    }
+
+    .capital_structure_info_items {
+        overflow: auto;
+    }
+
+    .capital_structure_info_item_wrapper {
+        min-width: 270px
+    }
+
+    .strategy_title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .strategy_info {
+        flex-direction: column;
+    }
+
+    .strategy_info_img {
+        width: 100%;
+    }
+
+    .strategy_info_text {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .strategy_items {
+        overflow: auto;
+    }
+
+    .strategy_item_name {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+
+
+
 
     .about_us {
         padding: 32px 16px;

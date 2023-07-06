@@ -933,6 +933,14 @@ footer {
         width: 100%;
     }
 
+    header .block .title {
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 46px;
+        letter-spacing: 0.4px;
+    }
+
     .menu {
         padding: 0 16px;
     }
